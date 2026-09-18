@@ -1,224 +1,541 @@
-YPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lindiwe Zwane | Professional Biography & CV</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
+/* =========================
+   GENERAL
+========================= */
 
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-brand">
-        <span class="brand-badge">LZ</span>
-        <span class="brand-text"><strong>Lindiwe Zwane</strong></span>
-      </a>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact" class="btn btn-primary-sm">Let's Connect</a>
-      </nav>
-    </div>
-  </header>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-  <main>
-    <!-- Hero Section -->
-    <section id="about" class="hero-section">
-      <div class="container hero-grid">
-        <div class="hero-monogram-box">
-          <div class="monogram-card">
-            <span class="monogram-letters">LZ</span>
-          </div>
-          <div class="hero-tags">
-            <span>Curious</span> • <span>Creative</span> • <span>Impact Driven</span>
-          </div>
-        </div>
+html {
+    scroll-behavior: smooth;
+}
 
-        <div class="hero-content">
-          <p class="greeting">HELLO, I'M</p>
-          <h1 class="hero-title">Lindiwe <span class="highlight">Zwane</span></h1>
-          <p class="hero-subtitle">Customer Experience • Digital Marketing • Data Insights</p>
-          <p class="hero-bio">
-            A proactive and motivated professional looking to gain hands-on workplace experience. 
-            I bridge the gap between people and technology by combining customer service excellence, 
-            creative digital marketing, and data-driven business insights to solve real-world problems.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View My Work &rarr;</a>
-            <button onclick="window.print()" class="btn btn-outline">Download CV &#8681;</button>
-          </div>
-          <div class="quick-meta">
-            <span>📍 Johannesburg, South Africa</span>
-            <span>✉️ <a href="mailto:lindiwepopi@gmail.com">lindiwepopi@gmail.com</a></span>
-            <span>📞 <a href="tel:0634484460">063 448 4460</a></span>
-          </div>
-        </div>
-      </div>
-    </section>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #222;
+}
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Core Skills & Competencies</h2>
-          <p>Practical tools and interpersonal strengths I bring to the workplace.</p>
-        </div>
+a {
+    text-decoration: none;
+}
 
-        <div class="skills-wrapper">
-          <div class="skill-category">
-            <h3>Technical Skills</h3>
-            <div class="skill-tags">
-              <span class="tag tag-tech">Google Workspace (Docs, Sheets, Slides)</span>
-              <span class="tag tag-tech">Data Extraction & Analysis</span>
-              <span class="tag tag-tech">Online Content Creation</span>
-              <span class="tag tag-tech">GitHub & Version Control</span>
-              <span class="tag tag-tech">Digital Marketing Tools</span>
-            </div>
-          </div>
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
 
-          <div class="skill-category">
-            <h3>Interpersonal & Soft Skills</h3>
-            <div class="skill-tags">
-              <span class="tag tag-soft">Clear & Empathetic Communication</span>
-              <span class="tag tag-soft">Cross-Platform Collaboration</span>
-              <span class="tag tag-soft">Customer Service & Problem Resolution</span>
-              <span class="tag tag-soft">Active Listening & Teamwork</span>
-              <span class="tag tag-soft">Fast Learner & Adaptability</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Featured Projects</h2>
-          <p>Key practical deliverables completed during the CAPACITI AI Acceleration Programme.</p>
-        </div>
+/* =========================
+   NAVIGATION
+========================= */
 
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-badge">Data Analysis</div>
-            <h3>Data-Driven Business Report</h3>
-            <p>
-              Extracted and structured datasets to compile an executive-ready business report, identifying patterns and translating numbers into actionable strategic insights.
-            </p>
-            <div class="card-tags">
-              <span>Data Extraction</span>
-              <span>Google Sheets</span>
-              <span>Reporting</span>
-            </div>
-          </article>
+.navbar {
+    background: #ffffff;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
 
-          <article class="project-card">
-            <div class="project-badge">Strategy & Tech</div>
-            <h3>Business Principles & IT Impact Assessment</h3>
-            <p>
-              Conducted both formative and summative assessments exploring fundamental business models and the transformative role modern information technology plays in operational efficiency.
-            </p>
-            <div class="card-tags">
-              <span>Business Principles</span>
-              <span>Information Technology</span>
-              <span>Research</span>
-            </div>
-          </article>
+.nav-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-          <article class="project-card">
-            <div class="project-badge">Web Development</div>
-            <h3>Interactive CV Web Application</h3>
-            <p>
-              Designed and built a responsive online curriculum vitae deployed on GitHub, demonstrating structured front-end development, responsive design, and version control.
-            </p>
-            <div class="card-tags">
-              <span>HTML5 & CSS3</span>
-              <span>GitHub Pages</span>
-              <span>Responsive UI</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #6c2bd9;
+}
 
-    <!-- Education & Certifications -->
-    <section id="education" class="education-section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Education & Certifications</h2>
-          <p>Continuous learning and formal qualifications.</p>
-        </div>
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-issuer">HubSpot Academy</span>
-              <h3>Digital Marketing Certification</h3>
-              <p>Specialized training in modern inbound marketing, content strategy, and online audience engagement.</p>
-            </div>
-          </div>
+.nav-links a {
+    color: #333;
+    font-weight: 500;
+}
 
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-issuer">EduCourse</span>
-              <h3>Customer Service Certificate</h3>
-              <p>Practical principles of customer satisfaction, resolving inquiries, and relationship management.</p>
-            </div>
-          </div>
+.nav-links a:hover {
+    color: #6c2bd9;
+}
 
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-issuer">EduCourse</span>
-              <h3>Call Centre Management Certificate</h3>
-              <p>Operational strategies, service quality metrics, inbound/outbound communication, and team workflow management.</p>
-            </div>
-          </div>
 
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-issuer">Rand Girls' High School</span>
-              <h3>Matric Certificate</h3>
-              <p>Completed National Senior Certificate with a foundation in academic discipline and teamwork.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+/* =========================
+   HERO
+========================= */
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-      <div class="container contact-container">
-        <div class="contact-card">
-          <h2>Let's Start a Conversation</h2>
-          <p>I am eager to contribute, learn, and add value to your team. Reach out via email or phone!</p>
-          <div class="contact-links">
-            <a href="mailto:lindiwepopi@gmail.com" class="btn btn-primary">Email: lindiwepopi@gmail.com</a>
-            <a href="tel:0634484460" class="btn btn-outline">Call: 063 448 4460</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f8f5ff, #ffffff);
+}
 
-  <footer class="footer">
-    <div class="container footer-content">
-      <p>&copy; 2026 Lindiwe Zwane. Built with HTML, CSS & GitHub Pages.</p>
-      <a href="#" class="back-to-top">Back to top &uarr;</a>
-    </div>
-  </footer>
+.hero-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
-Scroll down to the bottom, type Add index.html in the commit message box, and click Commit changes.
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.hero-content h2 {
+    font-size: 25px;
+    color: #6c2bd9;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #6c2bd9;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #5220a8;
+}
+
+.secondary-btn {
+    border: 2px solid #6c2bd9;
+    color: #6c2bd9;
+}
+
+.secondary-btn:hover {
+    background: #6c2bd9;
+    color: white;
+}
+
+
+/* =========================
+   HERO DECORATIVE CIRCLE
+========================= */
+
+.hero-visual {
+    flex: 0 0 320px;
+    display: flex;
+    justify-content: center;
+}
+
+.ai-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6c2bd9, #9b6bea);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 40px rgba(108, 43, 217, 0.25);
+}
+
+.ai-circle h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.ai-circle p {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 80px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #777;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+}
+
+.skill-card h3 {
+    color: #6c2bd9;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #666;
+}
+
+
+/* =========================
+   CERTIFICATES
+========================= */
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.certificate-card {
+    padding: 30px;
+    border-radius: 15px;
+    background: #f8f5ff;
+    border-left: 5px solid #6c2bd9;
+}
+
+.certificate-card h3 {
+    color: #6c2bd9;
+    margin-bottom: 8px;
+}
+
+.certificate-card p {
+    color: #666;
+}
+
+
+/* =========================
+   LEARNING JOURNEY
+========================= */
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-item {
+    padding: 25px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-item h3 {
+    color: #6c2bd9;
+    margin-bottom: 8px;
+}
+
+.timeline-item p {
+    color: #666;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
+    color: #6c2bd9;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.project-card span {
+    display: inline-block;
+    background: #f0eaff;
+    color: #6c2bd9;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin: 3px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    background: #6c2bd9;
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+}
+
+.cta .btn {
+    background: white;
+    color: #6c2bd9;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact-item {
+    margin: 18px 0;
+    font-size: 17px;
+}
+
+.contact-item strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-item a {
+    color: #6c2bd9;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 0;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content h2 {
+        font-size: 21px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-visual {
+        flex: none;
+    }
+
+    .ai-circle {
+        width: 230px;
+        height: 230px;
+    }
+
+    .ai-circle h3 {
+        font-size: 25px;
+    }
+
+    .skills-grid,
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .cta h2 {
+        font-size: 28px;
+    }
+
+}
