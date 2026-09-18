@@ -1,10 +1,224 @@
-// Adds interactive toggle functionality to skill chips
-document.addEventListener("DOMContentLoaded", () => {
-  const chips = document.querySelectorAll(".skill-chip");
+YPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lindiwe Zwane | Professional Biography & CV</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
-  chips.forEach((chip) => {
-    chip.addEventListener("click", () => {
-      chip.classList.toggle("active");
-    });
-  });
-});
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        <span class="brand-badge">LZ</span>
+        <span class="brand-text"><strong>Lindiwe Zwane</strong></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="btn btn-primary-sm">Let's Connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="about" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-monogram-box">
+          <div class="monogram-card">
+            <span class="monogram-letters">LZ</span>
+          </div>
+          <div class="hero-tags">
+            <span>Curious</span> • <span>Creative</span> • <span>Impact Driven</span>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <p class="greeting">HELLO, I'M</p>
+          <h1 class="hero-title">Lindiwe <span class="highlight">Zwane</span></h1>
+          <p class="hero-subtitle">Customer Experience • Digital Marketing • Data Insights</p>
+          <p class="hero-bio">
+            A proactive and motivated professional looking to gain hands-on workplace experience. 
+            I bridge the gap between people and technology by combining customer service excellence, 
+            creative digital marketing, and data-driven business insights to solve real-world problems.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View My Work &rarr;</a>
+            <button onclick="window.print()" class="btn btn-outline">Download CV &#8681;</button>
+          </div>
+          <div class="quick-meta">
+            <span>📍 Johannesburg, South Africa</span>
+            <span>✉️ <a href="mailto:lindiwepopi@gmail.com">lindiwepopi@gmail.com</a></span>
+            <span>📞 <a href="tel:0634484460">063 448 4460</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Core Skills & Competencies</h2>
+          <p>Practical tools and interpersonal strengths I bring to the workplace.</p>
+        </div>
+
+        <div class="skills-wrapper">
+          <div class="skill-category">
+            <h3>Technical Skills</h3>
+            <div class="skill-tags">
+              <span class="tag tag-tech">Google Workspace (Docs, Sheets, Slides)</span>
+              <span class="tag tag-tech">Data Extraction & Analysis</span>
+              <span class="tag tag-tech">Online Content Creation</span>
+              <span class="tag tag-tech">GitHub & Version Control</span>
+              <span class="tag tag-tech">Digital Marketing Tools</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Interpersonal & Soft Skills</h3>
+            <div class="skill-tags">
+              <span class="tag tag-soft">Clear & Empathetic Communication</span>
+              <span class="tag tag-soft">Cross-Platform Collaboration</span>
+              <span class="tag tag-soft">Customer Service & Problem Resolution</span>
+              <span class="tag tag-soft">Active Listening & Teamwork</span>
+              <span class="tag tag-soft">Fast Learner & Adaptability</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Projects</h2>
+          <p>Key practical deliverables completed during the CAPACITI AI Acceleration Programme.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-badge">Data Analysis</div>
+            <h3>Data-Driven Business Report</h3>
+            <p>
+              Extracted and structured datasets to compile an executive-ready business report, identifying patterns and translating numbers into actionable strategic insights.
+            </p>
+            <div class="card-tags">
+              <span>Data Extraction</span>
+              <span>Google Sheets</span>
+              <span>Reporting</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-badge">Strategy & Tech</div>
+            <h3>Business Principles & IT Impact Assessment</h3>
+            <p>
+              Conducted both formative and summative assessments exploring fundamental business models and the transformative role modern information technology plays in operational efficiency.
+            </p>
+            <div class="card-tags">
+              <span>Business Principles</span>
+              <span>Information Technology</span>
+              <span>Research</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-badge">Web Development</div>
+            <h3>Interactive CV Web Application</h3>
+            <p>
+              Designed and built a responsive online curriculum vitae deployed on GitHub, demonstrating structured front-end development, responsive design, and version control.
+            </p>
+            <div class="card-tags">
+              <span>HTML5 & CSS3</span>
+              <span>GitHub Pages</span>
+              <span>Responsive UI</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education" class="education-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Education & Certifications</h2>
+          <p>Continuous learning and formal qualifications.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-issuer">HubSpot Academy</span>
+              <h3>Digital Marketing Certification</h3>
+              <p>Specialized training in modern inbound marketing, content strategy, and online audience engagement.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-issuer">EduCourse</span>
+              <h3>Customer Service Certificate</h3>
+              <p>Practical principles of customer satisfaction, resolving inquiries, and relationship management.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-issuer">EduCourse</span>
+              <h3>Call Centre Management Certificate</h3>
+              <p>Operational strategies, service quality metrics, inbound/outbound communication, and team workflow management.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-issuer">Rand Girls' High School</span>
+              <h3>Matric Certificate</h3>
+              <p>Completed National Senior Certificate with a foundation in academic discipline and teamwork.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container contact-container">
+        <div class="contact-card">
+          <h2>Let's Start a Conversation</h2>
+          <p>I am eager to contribute, learn, and add value to your team. Reach out via email or phone!</p>
+          <div class="contact-links">
+            <a href="mailto:lindiwepopi@gmail.com" class="btn btn-primary">Email: lindiwepopi@gmail.com</a>
+            <a href="tel:0634484460" class="btn btn-outline">Call: 063 448 4460</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Lindiwe Zwane. Built with HTML, CSS & GitHub Pages.</p>
+      <a href="#" class="back-to-top">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+Scroll down to the bottom, type Add index.html in the commit message box, and click Commit changes.
